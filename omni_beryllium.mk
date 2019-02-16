@@ -1,5 +1,5 @@
 #
-# Copyright 2018 The Android Open Source Project
+# Copyright 2017 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,36 +19,27 @@ PRODUCT_RELEASE_NAME := beryllium
 
 $(call inherit-product, build/target/product/embedded.mk)
 
-# Inherit from our custom product configuration
+# Inherit from omni custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
-# Inherit language packages
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-
-# Charger
-PRODUCT_PACKAGES += \
-	charger_res_images \
-	charger
-
-# Encryption
-PRODUCT_PACKAGES += \
-	libcryptfs_hw
-
-# Kernel
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/Image.gz-dtb:kernel
-
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_beryllium
 PRODUCT_DEVICE := beryllium
+PRODUCT_NAME := omni_beryllium
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Pocophone F1
 PRODUCT_MANUFACTURER := Xiaomi
+
+TARGET_VENDOR_PRODUCT_NAME := beryllium
+TARGET_VENDOR_DEVICE_NAME := beryllium
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=beryllium \
+    BUILD_PRODUCT=beryllium \
+    PRODUCT_NAME=beryllium
 
 # enable stock zip packages flash
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=1 \
     ro.adb.secure=0 \
-    ro.allow.mock.location=0
+    ro.allow.mock.location=0 \
+    ro.product.name=beryllium \
+    ro.product.mod_device=berylium_global
