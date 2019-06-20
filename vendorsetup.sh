@@ -1,1 +1,1 @@
-add_lunch_combo omni_beryllium-eng
+add_lunch_combo omni_sirius-eng
