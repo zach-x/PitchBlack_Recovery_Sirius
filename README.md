@@ -1,4 +1,4 @@
-# xiaomi_beryllium
+# xiaomi_sirius
 For building OrangeFox for Xiaomi Mi 8 SE
 
 OrangeFox device tree for Xiaomi Mi 8 SE
