@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := beryllium
+PRODUCT_RELEASE_NAME := sirius
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -23,23 +23,23 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := beryllium
-PRODUCT_NAME := omni_beryllium
+PRODUCT_DEVICE := sirius
+PRODUCT_NAME := omni_sirius
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Pocophone F1
+PRODUCT_MODEL := MI 8 SE
 PRODUCT_MANUFACTURER := Xiaomi
 
-TARGET_VENDOR_PRODUCT_NAME := beryllium
-TARGET_VENDOR_DEVICE_NAME := beryllium
+TARGET_VENDOR_PRODUCT_NAME := sirius
+TARGET_VENDOR_DEVICE_NAME := sirius
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=beryllium \
-    BUILD_PRODUCT=beryllium \
-    PRODUCT_NAME=beryllium
+    TARGET_DEVICE=sirius \
+    BUILD_PRODUCT=sirius \
+    PRODUCT_NAME=sirius
 
 # enable stock zip packages flash
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=1 \
     ro.adb.secure=0 \
     ro.allow.mock.location=0 \
-    ro.product.name=beryllium \
-    ro.product.mod_device=berylium_global
+    ro.product.name=sirius \
+    ro.product.mod_device=sirius_global
