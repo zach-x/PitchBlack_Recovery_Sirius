@@ -20,7 +20,7 @@ PRODUCT_RELEASE_NAME := sirius
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from omni custom product configuration
-$(call inherit-product, vendor/batik/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sirius
