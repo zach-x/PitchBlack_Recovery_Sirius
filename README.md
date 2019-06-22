@@ -1,7 +1,7 @@
-# xiaomi_sirius
-For building OrangeFox for Xiaomi Mi 8 SE
+# xiaomi sirius
+For building Custom Recovery for Xiaomi Mi 8 SE
 
-OrangeFox device tree for Xiaomi Mi 8 SE
+Device tree for Xiaomi Mi 8 SE
 
 
 
