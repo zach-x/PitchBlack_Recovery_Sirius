@@ -26,7 +26,7 @@ Xiaomi Mi 8 SE was announced and released in June 2018.
 | Rear camera 2 | 5 MP, f/2.0                                    |
 | Front camera  | 20 MP, f/2.0                                    |
 
-
+![Xiaomi MI 8 SE](https://img.xda-cdn.com/rPe10fsFvFy8GyG8YSAVWEIo1XI=/https%3A%2F%2Fgithub.com%2FPitchBlack-Recovery%2FPitchBlack-Recovery.github.io%2Fraw%2Fmaster%2FPB_Banner1.png "Xiaomi MI 8 SE")
 
 
 # xiaomi_sirius_tree
