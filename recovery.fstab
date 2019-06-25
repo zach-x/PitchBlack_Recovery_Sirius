@@ -29,6 +29,8 @@
 
 #device         mount point      fstype        [device2] [length=]
 /dev/block/bootdevice/by-name/system       /system         ext4    ro,barrier=1                                                    wait,verify
+/dev/block/bootdevice/by-name/system       /system_image   emmc    flags=backup=1;flashimg=1
+/dev/block/bootdevice/by-name/vendor       /vendor_image   emmc    flags=backup=1;flashimg=1
 /dev/block/bootdevice/by-name/vendor       /vendor         ext4    ro,barrier=1                                                    wait,verify
 /dev/block/bootdevice/by-name/cache        /cache          ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
 /dev/block/bootdevice/by-name/userdata     /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
@@ -37,3 +39,14 @@
 /dev/block/bootdevice/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/misc         /misc           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/cust         /cust           ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
+/dev/block/bootdevice/by-name/modem        /firmware       vfat    flags=display="Firmware";mounttodecrypt;fsflags=ro
+/dev/block/bootdevice/by-name/modem        /modem          emmc    flags=backup=1;display="Modem"
+/dev/block/bootdevice/by-name/modemst1     /efs1           emmc    flags=backup=1;display=EFS
+/dev/block/bootdevice/by-name/modemst2     /efs2           emmc    flags=backup=1;subpartitionof=/efs1
+/dev/block/bootdevice/by-name/fsc          /efsc           emmc    flags=backup=1;subpartitionof=/efs1
+/dev/block/bootdevice/by-name/fsg          /efsg           emmc    flags=backup=1;subpartitionof=/efs1
+/dev/block/bootdevice/by-name/persist      /persist        ext4    flags=display="Persist";backup=1
+/dev/block/bootdevice/by-name/splash       /splash         emmc    flags=display="Boot Logo";backup=1;flashimg=1
+
+# Removable storage
+/dev/block/sdg1       /dev/block/sdg       /usb_otg        vfat    flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
